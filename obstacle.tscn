@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bbau04wmdwyhq"]
+
+[ext_resource type="Texture2D" uid="uid://cnf854gcxy15p" path="res://icon.svg" id="1_sl1jc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8ogb"]
+size = Vector2(20, 350)
+
+[node name="Obstacle" type="Node2D" unique_id=1029568566]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=207457821]
+position = Vector2(0, -800)
+scale = Vector2(0.5, 10)
+texture = ExtResource("1_sl1jc")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1977559456]
+position = Vector2(0, 800)
+scale = Vector2(0.5, 10)
+texture = ExtResource("1_sl1jc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2029813521]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1654532756]
+shape = SubResource("RectangleShape2D_s8ogb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2010659326]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1304911715]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=143366198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1374595841]
