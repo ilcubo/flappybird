@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bqeb7br0unuvx"]
 
+[ext_resource type="Script" uid="uid://dbtxcc4mbpbms" path="res://bird.gd" id="1_crnqq"]
 [ext_resource type="Texture2D" uid="uid://cnf854gcxy15p" path="res://icon.svg" id="1_g5k2s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8ogb"]
 size = Vector2(79, 77)
 
 [node name="Bird" type="CharacterBody2D" unique_id=1581606649]
+script = ExtResource("1_crnqq")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1676352911]
 position = Vector2(-4.000002, 1.0000038)
