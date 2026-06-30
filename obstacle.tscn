@@ -5,27 +5,54 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8ogb"]
 size = Vector2(20, 350)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl1jc"]
+size = Vector2(50, 1200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aubd6"]
+size = Vector2(50, 1200)
+
 [node name="Obstacle" type="Node2D" unique_id=1029568566]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=207457821]
+visible = false
 position = Vector2(0, -800)
 scale = Vector2(0.5, 10)
 texture = ExtResource("1_sl1jc")
 
 [node name="Icon2" type="Sprite2D" parent="." unique_id=1977559456]
+visible = false
 position = Vector2(0, 800)
 scale = Vector2(0.5, 10)
 texture = ExtResource("1_sl1jc")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2029813521]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1654532756]
 shape = SubResource("RectangleShape2D_s8ogb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2010659326]
+position = Vector2(0, -800)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1304911715]
+shape = SubResource("RectangleShape2D_sl1jc")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1074074798]
+offset_left = -25.0
+offset_top = -600.0
+offset_right = 25.0
+offset_bottom = 600.0
+color = Color(1, 0.06999999, 0.06999999, 1)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=143366198]
+position = Vector2(0, 800)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1374595841]
+shape = SubResource("RectangleShape2D_aubd6")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2" unique_id=586965651]
+offset_left = -25.0
+offset_top = -600.0
+offset_right = 25.0
+offset_bottom = 600.0
+color = Color(1, 0.06999999, 0.06999999, 1)
