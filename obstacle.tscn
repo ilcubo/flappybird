@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bbau04wmdwyhq"]
 
+[ext_resource type="Script" uid="uid://beryo5awpxh2x" path="res://obstacle.gd" id="1_aubd6"]
 [ext_resource type="Texture2D" uid="uid://cnf854gcxy15p" path="res://icon.svg" id="1_sl1jc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8ogb"]
@@ -12,6 +13,7 @@ size = Vector2(50, 1200)
 size = Vector2(50, 1200)
 
 [node name="Obstacle" type="Node2D" unique_id=1029568566]
+script = ExtResource("1_aubd6")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=207457821]
 visible = false

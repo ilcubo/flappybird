@@ -8,5 +8,8 @@
 [node name="Bird" parent="." unique_id=762531759 instance=ExtResource("1_f3sb7")]
 position = Vector2(351, 630)
 
+[node name="ObstacleSpawner" type="Node2D" parent="." unique_id=346549787]
+position = Vector2(2160, 0)
+
 [node name="Obstacle" parent="." unique_id=1029568566 instance=ExtResource("2_fj7yv")]
-position = Vector2(334, 654)
+position = Vector2(1561, 608)
