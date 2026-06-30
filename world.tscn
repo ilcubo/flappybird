@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcxbtb1m0pwca"]
 
 [ext_resource type="PackedScene" uid="uid://bqeb7br0unuvx" path="res://bird.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://bbau04wmdwyhq" path="res://obstacle.tscn" id="2_fj7yv"]
+[ext_resource type="Script" uid="uid://dm2ce841cbxdw" path="res://obstacle_spawner.gd" id="2_tlwt5"]
 
 [node name="World" type="Node2D" unique_id=1118291424]
 
@@ -9,7 +9,11 @@
 position = Vector2(351, 630)
 
 [node name="ObstacleSpawner" type="Node2D" parent="." unique_id=346549787]
-position = Vector2(2160, 0)
+position = Vector2(1440, 0)
+script = ExtResource("2_tlwt5")
 
-[node name="Obstacle" parent="." unique_id=1029568566 instance=ExtResource("2_fj7yv")]
-position = Vector2(1561, 608)
+[node name="Timer" type="Timer" parent="ObstacleSpawner" unique_id=157080993]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="ObstacleSpawner/Timer" to="ObstacleSpawner" method="_on_timer_timeout"]
