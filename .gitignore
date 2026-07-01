@@ -1,4 +1,5 @@
 *.import
+*.uid
 .editorconfig
 .godot
 .godot/*
