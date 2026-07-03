@@ -5,6 +5,11 @@ const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
+	var collision : KinematicCollision2D = get_last_slide_collision()
+	if collision != null:
+		print("died")
+		get_tree().paused = true
+		
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
