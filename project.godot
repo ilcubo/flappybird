@@ -14,6 +14,10 @@ config/name="flappybird"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://coxmy4c4se4gp"
+
 [display]
 
 window/size/viewport_width=720

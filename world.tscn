@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bqeb7br0unuvx" path="res://bird.tscn" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://dm2ce841cbxdw" path="res://obstacle_spawner.gd" id="2_tlwt5"]
-[ext_resource type="Script" uid="uid://dyiy4unc1u6pf" path="res://score_label.gd" id="3_tlwt5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s8ogb"]
 normal = Vector2(0, 1)
@@ -22,11 +21,6 @@ script = ExtResource("2_tlwt5")
 wait_time = 2.0
 autostart = true
 
-[node name="ScoreLabel" type="Label" parent="." unique_id=454148687]
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("3_tlwt5")
-
 [node name="BorderTop" type="StaticBody2D" parent="." unique_id=1368483814]
 position = Vector2(0, -200)
 
@@ -39,5 +33,5 @@ position = Vector2(0, 1480)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BorderBottom" unique_id=280328287]
 shape = SubResource("WorldBoundaryShape2D_8h51l")
 
+[connection signal="die" from="Bird" to="ObstacleSpawner" method="_on_bird_die"]
 [connection signal="timeout" from="ObstacleSpawner/Timer" to="ObstacleSpawner" method="_on_timer_timeout"]
-[connection signal="timeout" from="ObstacleSpawner/Timer" to="ScoreLabel" method="_on_timer_timeout"]

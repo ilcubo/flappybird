@@ -7,4 +7,7 @@ func _on_timer_timeout() -> void:
 	var obstacle : Node2D = obstacle_scene.instantiate();
 	obstacle.position.y += randf_range(0, 1000)
 	add_child(obstacle)
-	
+
+
+func _on_bird_die() -> void:
+	$Timer.paused = true

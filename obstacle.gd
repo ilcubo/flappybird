@@ -12,7 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	self.translate(velocity * Vector2.LEFT * delta)
+	self.translate(velocity * Global.game_speed * Vector2.LEFT * delta)
 	if global_position.x < -100:
 		queue_free()
 
