@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bkyau8pgs5esm"]
+
+[node name="Interface" type="CanvasLayer" unique_id=1595998990]
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=861319902]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="GameOver" type="VBoxContainer" parent="." unique_id=1959920188]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="GameOver" unique_id=1114765438]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="CurrentScore" type="Label" parent="GameOver" unique_id=556611361]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Score: "
+horizontal_alignment = 1
+
+[node name="HighScore" type="Label" parent="GameOver" unique_id=925324872]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "High score:"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="GameOver" unique_id=1932014905]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "Play Again"
