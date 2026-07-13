@@ -1,8 +1,6 @@
 extends Node2D
 
 
-signal scored
-
 @export var velocity : float = 250;
 
 # Called when the node enters the scene tree for the first time.
@@ -18,4 +16,4 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	emit_signal("scored")
+	get_tree().call_group("interface", "update_score")

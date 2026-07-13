@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bkyau8pgs5esm"]
 
-[node name="Interface" type="CanvasLayer" unique_id=1595998990]
+[ext_resource type="Script" uid="uid://b7ksrf5idxpmm" path="res://interface.gd" id="1_rh14k"]
+
+[node name="Interface" type="CanvasLayer" unique_id=1595998990 groups=["interface"]]
+script = ExtResource("1_rh14k")
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=861319902]
 offset_left = 20.0
@@ -11,6 +14,7 @@ theme_override_font_sizes/font_size = 40
 text = "0"
 
 [node name="GameOver" type="VBoxContainer" parent="." unique_id=1959920188]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

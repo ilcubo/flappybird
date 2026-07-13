@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bqeb7br0unuvx" path="res://bird.tscn" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://dm2ce841cbxdw" path="res://obstacle_spawner.gd" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bkyau8pgs5esm" path="res://interface.tscn" id="3_tlwt5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s8ogb"]
 normal = Vector2(0, 1)
@@ -33,5 +34,8 @@ position = Vector2(0, 1480)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BorderBottom" unique_id=280328287]
 shape = SubResource("WorldBoundaryShape2D_8h51l")
 
+[node name="Interface" parent="." unique_id=1595998990 instance=ExtResource("3_tlwt5")]
+
 [connection signal="die" from="Bird" to="ObstacleSpawner" method="_on_bird_die"]
+[connection signal="die" from="Bird" to="Interface" method="_on_bird_die"]
 [connection signal="timeout" from="ObstacleSpawner/Timer" to="ObstacleSpawner" method="_on_timer_timeout"]
