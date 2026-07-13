@@ -1,3 +1,4 @@
+class_name Bird
 extends CharacterBody2D
 
 
