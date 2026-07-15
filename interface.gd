@@ -1,8 +1,15 @@
 extends CanvasLayer
 
 
+signal start_game
+
 var score : int = 0
 
+
+func _ready() -> void:
+	if not Global.has_played:
+		$ScoreLabel.visible = false
+		$TitleScreen.visible = true
 
 func update_score() -> void:
 	score += 1
@@ -25,3 +32,9 @@ func _on_button_pressed() -> void:
 	$ScoreLabel.visible = true
 	Global.game_speed = 1.0
 	get_tree().reload_current_scene()
+
+func _on_play_button_pressed() -> void:
+	Global.has_played = true
+	$TitleScreen.visible = false
+	$ScoreLabel.visible = true
+	emit_signal("start_game")

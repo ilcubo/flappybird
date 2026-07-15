@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 		
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and Global.has_played:
 		velocity += get_gravity() * delta
 
 	# Handle jump.

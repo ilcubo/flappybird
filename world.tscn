@@ -20,7 +20,6 @@ script = ExtResource("2_tlwt5")
 
 [node name="Timer" type="Timer" parent="ObstacleSpawner" unique_id=157080993]
 wait_time = 2.0
-autostart = true
 
 [node name="BorderTop" type="StaticBody2D" parent="." unique_id=1368483814]
 position = Vector2(0, -200)
@@ -39,3 +38,4 @@ shape = SubResource("WorldBoundaryShape2D_8h51l")
 [connection signal="die" from="Bird" to="ObstacleSpawner" method="_on_bird_die"]
 [connection signal="die" from="Bird" to="Interface" method="_on_bird_die"]
 [connection signal="timeout" from="ObstacleSpawner/Timer" to="ObstacleSpawner" method="_on_timer_timeout"]
+[connection signal="start_game" from="Interface" to="ObstacleSpawner" method="_on_interface_start_game"]
